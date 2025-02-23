@@ -1,9 +1,9 @@
 # CEL Take home
-- Matt Suhay
+Matt Suhay
 
 This app was built using `Flask`, `python3.12`, `React 19`, and `bun 1.2.3`.
 
-The app should be fully self contained and ready to go. All you'll need to do is have python3.10 or greater installed.
+The app should be fully self contained and ready to go. All you'll need to do is have python 3.10 or greater installed with Flask.
 
 ```
 python3 -m venv .venv
@@ -13,7 +13,18 @@ pip install Flask
 flask run
 ```
 
-## /client
+### Assumptions
+
+- One event can stop at the same time as one starts, much like calender events can butt up against each other
+- Events will not run over midnight into the next day
+- The same event will not run twice on the same day
+- Events, currently, cannot be removed or edited, but can be in later iterations
+- If an event runs on multiple days, and at least one of those days has a conflict, the event is invalid 
+
+
+## The following info is for further clarification, the frontend is already bundled and does not need to be again
+
+### /client
 
 To rebuild the client, you will need `bun 1.2.3` installed. To build, type the following:
 
@@ -25,18 +36,18 @@ bun run build
 
 This will bundle the frontend into the `/static` directory at the root of the project.
 
-## /static
+### /static
 
 These are generated files for the frontend for the Flask service to serve directly.
 
-## database_default.db
+### database_default.db
 
 This is a clean SQLLite db with the schema and two records applied to it. Feel free to rename this file if you'd like to start over.
 
-## database.db
+### database.db
 
 This is the current, active SQLLite file the app will use.
 
-## schema.sql
+### schema.sql
 
 This is the schema you can use to create a new db.
