@@ -13,6 +13,8 @@ pip install Flask
 flask run
 ```
 
+Then, from a browser, open `http://127.0.0.1:5000`
+
 ### Assumptions
 
 - One event can stop at the same time as one starts, much like calender events can butt up against each other
